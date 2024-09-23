@@ -8,9 +8,17 @@ import { redirect } from "next/navigation";
  * @returns {never} This function doesn't return as it triggers a redirect.
  */
 export function encodedRedirect(
-  type: "error" | "success",
-  path: string,
-  message: string,
+    type: "error" | "success",
+    path: string,
+    message: string
 ) {
-  return redirect(`${path}?${type}=${encodeURIComponent(message)}`);
+    return redirect(`${path}?${type}=${encodeURIComponent(message)}`);
 }
+
+export const formatToIndonesianDate = (date: Date) => {
+    return new Intl.DateTimeFormat("id-ID", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    }).format(date);
+};

@@ -30,7 +30,7 @@ export default async function lamaranPage() {
 			<div className="w-full flex justify-between items-center">
 				<span className="font-bold text-xl">Data Lamaran Terkirim</span>
 				<div className="flex gap-2">
-					<Link href="/admin/">
+					<Link href="/admin/cms/lamaran/tambah">
 						<Button
 							className="flex items-center gap-2"
 							size={"sm"}

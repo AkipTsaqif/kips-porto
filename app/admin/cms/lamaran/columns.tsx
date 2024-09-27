@@ -28,17 +28,14 @@ export const columns: ColumnDef<JobApplication>[] = [
         cell: (info) => {
             const dateValue = info.getValue() as string | null;
 
-            return dateValue ? formatToIndonesianDate(new Date(dateValue)) : "-";
+            return dateValue
+                ? formatToIndonesianDate(new Date(dateValue))
+                : "-";
         },
     },
     {
         accessorKey: "platform",
         header: "Platform",
-    },
-    {
-        accessorKey: "progress",
-        header: "Progres",
-        cell: (row) => progressDictionary.get(row.getValue() as string),
     },
     {
         accessorKey: "date_reply",
@@ -48,6 +45,10 @@ export const columns: ColumnDef<JobApplication>[] = [
     {
         accessorKey: "status",
         header: "Status",
-        cell: (row) => statusDictionary.get(row.getValue() as string),
+    },
+    {
+        accessorKey: "type",
+        header: "Tipe",
+        cell: (row) => (row.getValue() ? "Dari HR" : "Mandiri"),
     },
 ];

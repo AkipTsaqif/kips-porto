@@ -19,8 +19,8 @@ export type Database = {
                     id: number;
                     job_title: string | null;
                     platform: string | null;
-                    progress: string | null;
                     status: string | null;
+                    type: boolean | null;
                     updated_at: string | null;
                 };
                 Insert: {
@@ -32,8 +32,8 @@ export type Database = {
                     id?: number;
                     job_title?: string | null;
                     platform?: string | null;
-                    progress?: string | null;
                     status?: string | null;
+                    type?: boolean | null;
                     updated_at?: string | null;
                 };
                 Update: {
@@ -45,8 +45,8 @@ export type Database = {
                     id?: number;
                     job_title?: string | null;
                     platform?: string | null;
-                    progress?: string | null;
                     status?: string | null;
+                    type?: boolean | null;
                     updated_at?: string | null;
                 };
                 Relationships: [];
